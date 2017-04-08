@@ -71,7 +71,7 @@
 <link href="/qiyu1234.github.io/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="正则表达式," />
 
 
 
@@ -87,15 +87,17 @@
 
 
 
-<meta name="description" content="撸起袖子，就是干">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Adventure">
-<meta property="og:url" content="https://qiyu1234.github.io/tags/生活点滴/index.html">
+<meta name="description" content="今天刚好看廖雪峰老师的Python教程，刚好看到正则表达式，顺便整理下学习笔记，加深印象废话不说直接看">
+<meta name="keywords" content="正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式学习笔记">
+<meta property="og:url" content="https://qiyu1234.github.io/2017/04/08/regex/index.html">
 <meta property="og:site_name" content="Adventure">
-<meta property="og:description" content="撸起袖子，就是干">
+<meta property="og:description" content="今天刚好看廖雪峰老师的Python教程，刚好看到正则表达式，顺便整理下学习笔记，加深印象废话不说直接看">
+<meta property="og:updated_time" content="2017-04-08T03:23:17.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Adventure">
-<meta name="twitter:description" content="撸起袖子，就是干">
+<meta name="twitter:title" content="正则表达式学习笔记">
+<meta name="twitter:description" content="今天刚好看廖雪峰老师的Python教程，刚好看到正则表达式，顺便整理下学习笔记，加深印象废话不说直接看">
 
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://qiyu1234.github.io/tags/生活点滴/"/>
+  <link rel="canonical" href="https://qiyu1234.github.io/2017/04/08/regex/"/>
 
 
 
 
 
-  <title> 标签: 生活点滴 | Adventure </title>
+  <title> 正则表达式学习笔记 | Adventure </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,46 +260,270 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        生活点滴
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://qiyu1234.github.io/qiyu1234.github.io/2017/04/08/regex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Adventure">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/qiyu1234.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Adventure">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                正则表达式学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T10:25:39+08:00">
+                2017-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/qiyu1234.github.io/2017/04/08/regex/" class="leancloud_visitors" data-flag-title="正则表达式学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>今天刚好看廖雪峰老师的Python教程，刚好看到正则表达式，顺便整理下学习笔记，加深印象<br>废话不说直接看<br><a id="more"></a></p>
+<h4 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h4><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>任意字符</td>
+</tr>
+<tr>
+<td>[abc]</td>
+<td>包含a,b,c的任何字符（a&#124;b&#124;c作用相同）</td>
+</tr>
+<tr>
+<td>[^abc]</td>
+<td>除了a,b,c之外的任意字符</td>
+</tr>
+<tr>
+<td>[a-zA-Z]</td>
+<td>从a到z以及A到Z的任何字符</td>
+</tr>
+<tr>
+<td>[abc[hij]]</td>
+<td>任意a,b,c,h,i,j字符（a&#124;b&#124;c&#124;h&#124;i&#124;j作用相同）</td>
+</tr>
+<tr>
+<td>[a-z&amp;&amp;[hij]]</td>
+<td>任意h,i,j字符    （交集）</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>空白字符（空格，tab，换行，换页，回车）</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>非空白字符（[^\s]）</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>数字[0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>非数字[^0-9]</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>词字符[a-zA-Z0-9]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>非词字符[^\w]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="逻辑操作符"><a href="#逻辑操作符" class="headerlink" title="逻辑操作符"></a>逻辑操作符</h4><p>X|Y  | X或Y<br>X|Y可以匹配X或Y，所以(P|p)ython可以匹配’Python’或者’python’。</p>
+<h4 id="边界匹配符"><a href="#边界匹配符" class="headerlink" title="边界匹配符"></a>边界匹配符</h4><p>^      一行的起始<br>$     一行的结束<br>^表示行的开头，^\d表示必须以数字开头。<br>$表示行的结束，\d$表示必须以数字结束。<br>你可能注意到了，py也可以匹配’python’，但是加上^py$就变成了整行匹配，就只能匹配’py’了。</p>
+<h4 id="贪婪匹配"><a href="#贪婪匹配" class="headerlink" title="贪婪匹配"></a>贪婪匹配</h4><p>最后需要特别指出的是，正则匹配默认是贪婪匹配，也就是匹配尽可能多的字符。</p>
+<table>
+<thead>
+<tr>
+<th>贪婪型</th>
+<th>勉强型</th>
+<th>如何匹配 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X?</td>
+<td>X??</td>
+<td>一个或多个X</td>
+</tr>
+<tr>
+<td>X*</td>
+<td>X* ?</td>
+<td>零个或多个X</td>
+</tr>
+<tr>
+<td>X+</td>
+<td>X+?</td>
+<td>一个或多个X</td>
+</tr>
+<tr>
+<td>X{n}</td>
+<td>X{n}?</td>
+<td>恰好发生n次</td>
+</tr>
+<tr>
+<td>X{n,}</td>
+<td>X{n,}?</td>
+<td>至少n次</td>
+</tr>
+<tr>
+<td>X{n,m}</td>
+<td>X{n,m}?</td>
+<td>X至少n次，且不大于m次</td>
+</tr>
+</tbody>
+</table>
+<p>来看一个例子：\d{3}\s+\d{3,8}。<br>我们来从左到右解读一下：<br>\d{3}表示匹配3个数字，例如’010’；<br>\s可以匹配一个空格（也包括Tab等空白符），所以\s+表示至少有一个空格，例如匹配’ ‘，’ ‘等；<br>\d{3,8}表示3-8个数字，例如’1234567’。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/qiyu1234.github.io/2017/04/01/25岁生日快乐/" itemprop="url">
-              
-                <span itemprop="name">25岁生日快乐</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-01T22:29:15+08:00"
-              content="2017-04-01" >
-          04-01
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/qiyu1234.github.io/tags/正则表达式/" rel="tag"># 正则表达式</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/qiyu1234.github.io/2017/04/01/25岁生日快乐/" rel="prev" title="25岁生日快乐">
+                25岁生日快乐 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -305,6 +531,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -324,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/qiyu1234.github.io/images/avatar.gif"
@@ -407,6 +646,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用表达式"><span class="nav-number">1.</span> <span class="nav-text">常用表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑操作符"><span class="nav-number">2.</span> <span class="nav-text">逻辑操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边界匹配符"><span class="nav-number">3.</span> <span class="nav-text">边界匹配符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#贪婪匹配"><span class="nav-number">4.</span> <span class="nav-text">贪婪匹配</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -503,6 +758,10 @@
   
 
   
+  <script type="text/javascript" src="/qiyu1234.github.io/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/qiyu1234.github.io/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
